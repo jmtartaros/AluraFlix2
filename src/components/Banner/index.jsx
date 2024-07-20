@@ -23,7 +23,10 @@ const BannerStyles = styled.div`
   display: flex;
   align-items: center;
   @media screen and (min-width: 768px) and (max-width: 1220px) {
-    height: 500px;
+    height: 600px;
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    height: 330px;
   }
 `;
 

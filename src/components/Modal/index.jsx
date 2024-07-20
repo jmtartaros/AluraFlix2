@@ -27,6 +27,12 @@ const ContenedorModal = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (min-width: 768px) and (max-width: 1220px) {
+    width: 500px;
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Boton = styled.button`

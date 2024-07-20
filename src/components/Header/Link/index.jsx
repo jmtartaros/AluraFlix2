@@ -17,10 +17,24 @@ const StyledNavLink = styled(NavLink)`
   align-items: center;
 
   &.active {
-    border: 1px solid blue;
-    color: blue;
+    border: 1px solid purple;
+    color: purple;
     font-weight: 700;
-    box-shadow: inset 0 0 18px rgba(0, 0, 255, 0.8);
+    box-shadow: inset 0 0 18px rgba(128, 0, 128, 0.8);
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    border: none;
+    &.active {
+      border: none;
+      box-shadow: none;
+    }
+    img {
+      display: block;
+      width: 50px;
+    }
+    span {
+      display: none;
+    }
   }
 `;
 

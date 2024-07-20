@@ -11,7 +11,7 @@ import NewVideo from "../Pages/NewVideo";
 import Error404 from "../components/Error";
 
 const BackColor = styled.div`
-  background-color: var(--backColor);
+  background: var(--backColor);
   width: 100%;
   height: 100%;
 `;
@@ -32,6 +32,7 @@ function AppRouter() {
 
             <Routes>
               <Route index element={<Inicio />} />
+              <Route path="/" element={<Inicio />} />
               <Route path="newvideo" element={<NewVideo />}></Route>
               <Route path="*" element={<Error404 />}></Route>
             </Routes>

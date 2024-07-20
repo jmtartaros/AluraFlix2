@@ -5,7 +5,7 @@ import { VideoContext } from "../../Context";
 import Tag from "./Tag";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Navigation, A11y } from "swiper/modules";
+import { Navigation, Scrollbar, A11y } from "swiper/modules";
 import Modal from "../Modal";
 
 const MainContainer = styled.main`
@@ -28,15 +28,29 @@ const Container = styled.section`
 const ContainerCard = styled.div`
   width: 100%;
   height: 100%;
-  gap: 2rem;
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: none;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
-    color: #000;
+    color: #ffffff;
   }
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
     color: red;
   }
+  /* @media screen and (min-width: 330px) and (max-width: 768px) {
+    .swiper-slide {
+      border: 1px solid red;
+      padding: 5rem;
+    }
+  } */
 `;
 
 const Main = () => {
@@ -75,13 +89,28 @@ const Main = () => {
           return (
             <Container key={genero}>
               <Tag colorFondo={colorFondo} colorLetra={colorLetra}>
-                <h2>{genero}</h2>
+                <h2>{genero.toUpperCase()}</h2>
               </Tag>
               <ContainerCard>
                 <Swiper
-                  modules={[Navigation, A11y]}
-                  spaceBetween={10}
-                  slidesPerView={3}
+                  modules={[Navigation, Scrollbar, A11y]}
+                  spaceBetween={30}
+                  slidesPerView={1}
+                  breakpoints={{
+                    500: {
+                      slidesPerView: 1,
+                      spaceBetween: 10,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    1200: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
+                  }}
+                  scrollbar={true}
                   navigation={true}
                   loop={true}
                 >

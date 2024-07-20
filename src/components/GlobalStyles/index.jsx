@@ -2,7 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyled = createGlobalStyle`
 :root{
-  --backColor:#212121;
+  /* --backColor:#22121; */
+  --backColor: linear-gradient(to bottom, #0D0D0D , #333333 );
+  ;
   --footer:#03070B;
 }
 *{

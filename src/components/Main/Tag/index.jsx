@@ -13,6 +13,14 @@ const Div = styled.div`
   border-radius: 1rem;
   margin: 0 5rem;
   padding: 2rem;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    width: 300px;
+    margin: 0 7rem;
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 200px;
+    margin: 0 auto;
+  }
 `;
 
 const Tag = ({ children, colorFondo, colorLetra }) => {

@@ -7,6 +7,8 @@ const CardStyles = styled.div`
   border-radius: 25px;
   margin: 0 5rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   overflow: hidden;
   cursor: pointer;
@@ -17,10 +19,13 @@ const CardStyles = styled.div`
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
-    width: 200px;
+  @media screen and (min-width: 768px) and (max-width: 1220px) {
+    width: 300px;
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    height: 400px;
     img {
-      width: 150px;
+      height: 100%;
     }
   }
 `;
@@ -41,15 +46,22 @@ const BtnCard = styled.button`
   border: none;
   background-color: black;
   padding: 0;
-  font-size: 1.2rem;
   img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-right: 8px;
-  }
-  &:hover {
-    color: red;
     cursor: pointer;
+    background: transparent;
+    &:hover {
+      filter: drop-shadow(1px 1px 10px white);
+    }
+  }
+
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 `;
 
@@ -81,11 +93,9 @@ const Card = (props) => {
         <ContainerBtn>
           <BtnCard onClick={handleDelete}>
             <img src="/img/delete.png" alt="delete" />
-            Delete
           </BtnCard>
           <BtnCard onClick={open}>
             <img src="/img/edit.png" alt="edit" />
-            Edit
           </BtnCard>
         </ContainerBtn>
       </CardStyles>

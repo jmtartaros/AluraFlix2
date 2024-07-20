@@ -13,9 +13,10 @@ const BtnStyles = styled.button`
   color: #fff;
   transition: all 0.3s;
   &:hover {
-    border: 1px solid blue;
-    color: blue;
+    border: 1px solid purple;
+    color: purple;
     font-weight: 700;
+    box-shadow: 0px 0px 5px 3px purple;
   }
 `;
 

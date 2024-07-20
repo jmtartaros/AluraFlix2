@@ -8,6 +8,11 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+  }
 `;
 const Section = styled.section`
   width: 50%;
@@ -15,8 +20,11 @@ const Section = styled.section`
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-
   iframe {
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
     width: 100%;
     height: 100%;
   }
@@ -26,7 +34,13 @@ const DivContenido = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(1px 1px 10px white);
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    h1,
+    h3 {
+      display: none;
+    }
+  }
 `;
 
 const Title = styled.h1`

@@ -11,18 +11,22 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 `;
 const Section = styled.section`
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const DivSection = styled.div`
   display: flex;
   flex-direction: column;
   width: 573px;
-  /* height: 108px; */
   gap: 1rem;
+
   label {
     color: white;
     font-size: 18px;
@@ -34,6 +38,12 @@ const DivSection = styled.div`
     &::placeholder {
       color: red;
     }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1220px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 100%;
   }
 `;
 const Input = styled.input`
@@ -50,12 +60,20 @@ const Input = styled.input`
     border-color: white;
     outline: none;
   }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 100%;
+    height: 45px;
+    font-size: 1.1rem;
+  }
 `;
 
 const DivBtn = styled.div`
   display: flex;
   width: 573px;
   gap: 1rem;
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const Select = styled.select`
   width: 100%;

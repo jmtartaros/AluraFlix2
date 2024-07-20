@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import Formulario from "../../components/Formulario";
 
-// import { useContext } from "react";
-// import { VideoContext } from "../../Context";
-
 const PageVideo = styled.div`
   width: 100%;
   height: 100%;
@@ -14,12 +11,16 @@ const PageVideo = styled.div`
   align-items: center;
   gap: 1rem;
   padding: 24px 0;
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    padding: 0 1.3rem;
+  }
 `;
 
 const DivEncabezado = styled.div`
   background: none;
   width: 500px;
   text-align: center;
+  color: #fff;
   h1 {
     font-size: 60px;
     font-weight: bold;
@@ -28,15 +29,28 @@ const DivEncabezado = styled.div`
     font-size: 20px;
     font-weight: lighter;
   }
-  h1,
-  span {
-    color: white;
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 100%;
+
+    h1 {
+      font-size: 32px;
+    }
+    span {
+      font-size: 18px;
+    }
   }
 `;
 
 const DivFormContainer = styled.div`
   width: 1170px;
   height: 867px;
+  @media screen and (min-width: 768px) and (max-width: 1220px) {
+    width: 768px;
+    height: 670px;
+  }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Div = styled.div`
@@ -48,11 +62,15 @@ const Div = styled.div`
     font-weight: bolder;
     color: #fff;
   }
+  @media screen and (min-width: 330px) and (max-width: 768px) {
+    h2 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
 `;
 
 const NewVideo = () => {
-  //   const { addVideo } = useContext(VideoContext);
-
   return (
     <>
       <PageVideo>
